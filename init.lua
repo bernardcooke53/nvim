@@ -44,6 +44,7 @@ opt.smartindent = true
 --    autocmd BufLeave term://* stopinsert
 -- ]]
 
+
 -------------------------------------------
 -- LOAD KEYBINDINGS
 -------------------------------------------
@@ -52,4 +53,4 @@ require("keybindings")
 -------------------------------------------
 -- LOAD PLUGINS
 -------------------------------------------
-require("packages")
+require("plugins")
