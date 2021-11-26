@@ -19,6 +19,7 @@ opt.showmatch = true
 opt.foldmethod = "marker"
 opt.splitright = true
 opt.splitbelow = true
+opt.scrolloff = 12
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
 

@@ -21,4 +21,5 @@ keymap("n", "<Leader><Leader>", "%", opts)
 -- Copy lines
 -- keymap("n", "<Leader-Shift-j>", "y$<CR>o<CR>p<CR>", opts) -- not currently working
 
-
+-- run current file in Python -- another one currently broken
+-- keymap("n", ":py", ":!python3 %<CR>", opts)
