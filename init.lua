@@ -10,6 +10,21 @@ local bo = vim.bo
 g.mapleader = " "
 g.showcmd = true
 
+-- Ignore certain patterns on search
+-- Nice menu when typing `:find *.py`
+g.wildmode=longest,list,full
+g.wildmenu = true
+
+-- Ignore files
+opt.wildignore=opt.wildignore:append("*.pyc")
+opt.wildignore=opt.wildignore:append("*_build/*")
+opt.wildignore=opt.wildignore:append("**/coverage/*")
+opt.wildignore=opt.wildignore:append("**/node_modules/*")
+opt.wildignore=opt.wildignore:append("**/android/*")
+opt.wildignore=opt.wildignore:append("**/ios/*")
+opt.wildignore=opt.wildignore:append("**/.git/*")
+
+
 ------------------------------
 -- UI
 ------------------------------
@@ -19,7 +34,6 @@ opt.showmatch = true
 opt.foldmethod = "marker"
 opt.splitright = true
 opt.splitbelow = true
-opt.scrolloff = 12
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
 
@@ -44,7 +58,6 @@ opt.smartindent = true
 --    autocmd TermOpen * startinsert
 --    autocmd BufLeave term://* stopinsert
 -- ]]
-
 
 -------------------------------------------
 -- LOAD KEYBINDINGS
