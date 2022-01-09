@@ -10,6 +10,8 @@ local bo = vim.bo
 g.mapleader = " "
 g.showcmd = true
 
+cmd [[ "syntax enable" ]]
+
 -- Ignore certain patterns on search
 -- Nice menu when typing `:find *.py`
 g.wildmode=longest,list,full
@@ -36,9 +38,6 @@ opt.splitright = true
 opt.splitbelow = true
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
-
--- Remove whitespace on save
-cmd [[au BufWritePre * :%s/\s\+$//e]]
 
 -- Set default tab/indentation options local to window
 opt.expandtab = true
@@ -68,3 +67,9 @@ require("keybindings")
 -- LOAD PLUGINS
 -------------------------------------------
 require("plugins")
+
+
+-------------------------------------------
+-- LOAD COMMANDS
+-------------------------------------------
+-- require("commands")

@@ -18,11 +18,27 @@ require("packer").startup(function()
         }
         end
     }
+    -- LSP and completion
     use "neovim/nvim-lspconfig"
+    use "nvim-lua/completion-nvim"
+    -- Lua Development
+    use "tjdevries/nlua.nvim"
     use "psf/black"
+    use 'KarlWithK/rust-tools.nvim'
+    use 'kabouzeid/nvim-lspinstall'
+    use 'hrsh7th/nvim-compe'
+    use 'onsails/lspkind-nvim'
+    use 'ray-x/lsp_signature.nvim'
+    use 'SirVer/ultisnips'
 
     -- A fuzzy file finder
-    use "kien/ctrlp.vim"
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = {
+            {"nvim-lua/popup.nvim"},
+            {"nvim-lua/plenary.nvim"}
+        }
+    }
     -- Comment/Uncomment tool
     use "scrooloose/nerdcommenter"
     -- Switch to the begining and the end of a block by pressing %

@@ -23,3 +23,9 @@ keymap("n", "<Leader><Leader>", "%", opts)
 
 -- run current file in Python -- another one currently broken
 -- keymap("n", ":py", ":!python3 %<CR>", opts)
+
+-- Command line sugar for Telescope fuzzy file finding
+keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", opts)
+keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
