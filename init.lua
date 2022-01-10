@@ -38,6 +38,7 @@ opt.splitright = true
 opt.splitbelow = true
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
+opt.scrolloff = 10
 
 -- Set default tab/indentation options local to window
 opt.expandtab = true
