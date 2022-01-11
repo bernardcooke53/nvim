@@ -24,7 +24,7 @@ require("packer").startup(function()
     -- Lua Development
     use "tjdevries/nlua.nvim"
     use "psf/black"
-    use 'KarlWithK/rust-tools.nvim'
+    use 'simrat39/rust-tools.nvim'
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
     use 'onsails/lspkind-nvim'
@@ -44,7 +44,13 @@ require("packer").startup(function()
     -- Switch to the begining and the end of a block by pressing %
     use "tmhedberg/matchit"
     -- A Tree-like side bar for better navigation
-    use "scrooloose/nerdtree"
+    use {
+        "preservim/nerdtree",
+        config = function()
+            -- Show hidden files by default
+            vim.g.NERDTreeShowHidden = 1 
+        end
+    }
     -- A cool status bar
     use "vim-airline/vim-airline"
     -- Airline themes

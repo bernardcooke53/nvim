@@ -29,3 +29,4 @@ keymap("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
+
