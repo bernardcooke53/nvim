@@ -31,6 +31,28 @@
         "lua": {
             "command": "lua-lsp",
             "filetypes": ["lua"]
+        },
+        "sql": {
+            "command": "sql-language-server",
+            "args": ["up", "--method", "stdio"],
+            "filetypes": ["sql", "plsql"],
+            "settings": {
+                "sqlLanguageServer": {
+                    "lint": {
+                        "rules": {
+                            "align-column-to-the-first": "warn",
+                            "column-new-line": "warn",
+                            "linebreak-after-clause-keyword": "off",
+                            "reserved-word-case": ["error", "upper"],
+                            "space-surrounding-operators": ["warn", "always"],
+                            "align-where-clause-to-the-first": [
+                                "warn",
+                                "always"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     },
     "pyright.enable": true,
