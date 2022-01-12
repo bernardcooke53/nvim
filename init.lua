@@ -30,6 +30,7 @@ opt.wildignore=opt.wildignore:append("**/.git/*")
 ------------------------------
 -- UI
 ------------------------------
+g.termguicolors = true
 opt.relativenumber = true
 opt.number = true
 opt.showmatch = true

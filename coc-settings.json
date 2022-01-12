@@ -1,0 +1,40 @@
+{
+    "prettier.disableLanguages": ["python", "rust", "terraform", "go"],
+    "prettier.tabWidth": 4,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "sql",
+        "python",
+        "terraform",
+        "go",
+        "rust",
+        "json",
+        "yaml",
+        "jsonc"
+    ],
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": ["dockerfile"],
+            "args": ["--stdio"]
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "filetypes": ["go"]
+        },
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": ["lua"]
+        }
+    },
+    "pyright.enable": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true
+}
