@@ -21,6 +21,15 @@ require("packer").startup(function()
     -- LSP and completion
     use "neovim/nvim-lspconfig"
     use "nvim-lua/completion-nvim"
+    -- Quoting
+    use "tpope/vim-surround"
+
+    -- Date incrementing
+    use "tpope/vim-speeddating"
+
+    -- Deletes don't override current yank
+    use "svermeulen/vim-cutlass"
+
     -- Lua Development
     use "tjdevries/nlua.nvim"
     use "psf/black"
@@ -60,6 +69,8 @@ require("packer").startup(function()
             vim.g.NERDTreeShowHidden = 1 
         end
     }
+    -- Multi-cursor support
+    use {"mg979/vim-visual-multi", branch = "master"}
     -- A cool status bar
     use "vim-airline/vim-airline"
     -- Airline themes

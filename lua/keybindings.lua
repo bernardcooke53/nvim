@@ -30,3 +30,8 @@ keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
 
+-- Set m key for cutting text - https://github.com/svermeulen/vim-cutlass
+keymap("n", "m", "d", opts)
+keymap("n", "mm", "dd", opts)
+keymap("x", "m", "d", opts)
+keymap("x", "mm", "dd", opts)
