@@ -48,6 +48,8 @@ opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.smartindent = true
 
+-- Set global Python location for nvim environment
+g.python3_host_prog = "C:/Users/CookeB/AppData/Local/Programs/Python/Python310/python.exe"
 -------------------------
 -- Terminal
 -------------------------
