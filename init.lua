@@ -26,6 +26,7 @@ opt.wildignore=opt.wildignore:append("**/android/*")
 opt.wildignore=opt.wildignore:append("**/ios/*")
 opt.wildignore=opt.wildignore:append("**/.git/*")
 
+g.python_host_prog = "/usr/bin/python3"
 
 ------------------------------
 -- UI
@@ -44,7 +45,11 @@ opt.wrap = false
 
 -- Set default tab/indentation options local to window
 opt.expandtab = true
+g.shiftwidth = 4
+g.tabstop = 4
+g.softtabstop = 4
 opt.shiftwidth = 4
+opt.tabstop = 4
 opt.softtabstop = 4
 opt.smartindent = true
 opt.wrap = false

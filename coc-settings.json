@@ -1,6 +1,7 @@
 {
     "prettier.disableLanguages": ["python", "rust", "terraform", "go"],
     "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "sql",
         "python",
@@ -58,5 +59,6 @@
     "pyright.enable": true,
     "python.analysis.autoImportCompletions": true,
     "python.formatting.provider": "black",
-    "python.linting.mypyEnabled": true
+    "python.linting.mypyEnabled": true,
+    "svelte.enable-ts-plugin": true
 }
