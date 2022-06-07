@@ -87,6 +87,8 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+      { "svermeulen/vim-cutlass" },
+      { "psf/black" }
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -138,12 +140,6 @@ local config = {
     --  vim.g.NERDTreeShowHidden = 1
     --  return config
     --end,
-    {
-      "svermeulen/vim-cutlass"
-    },
-    {
-      "psf/black"
-    }
   },
 
   -- LuaSnip Options
@@ -238,7 +234,18 @@ local config = {
       pattern = "plugins.lua",
       command = "source <afile> | PackerSync",
     })
+    
+    -- Keymaps - set using vim.api.nvim_set_keymap({mode}, {keymap}, {mapped to}, {options})
+    vim.keymap.set("n", "<c-s>", ":w<CR>", {})
+    vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", {})
 
+    local opts = { noremap = true }
+
+    -- Set m key for cutting text - https://github.com/svermeulen/vim-cutlass
+    vim.keymap.set("n", "m", "d", opts)
+    vim.keymap.set("n", "mm", "dd", opts)
+    vim.keymap.set("x", "m", "d", opts)
+    vim.keymap.set("x", "mm", "dd", opts)
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
