@@ -113,6 +113,13 @@ local config = {
       end
       return config -- return final config table
     end,
+    ["neo-tree"] = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false
+        }
+      }
+    },
     treesitter = {
       ensure_installed = { "lua" },
     },
@@ -126,6 +133,16 @@ local config = {
       defaults = {
         file_ignore_patterns = {".git", "node_modules", "lib/python", "Lib/python"}
       }
+    },
+    --nerdtree = function(config)
+    --  vim.g.NERDTreeShowHidden = 1
+    --  return config
+    --end,
+    {
+      "svermeulen/vim-cutlass"
+    },
+    {
+      "psf/black"
     }
   },
 
