@@ -124,7 +124,7 @@ local config = {
     },
     telescope = {
       defaults = {
-        file_ignore_patterns = {".git/index", "node_modules", "lib/python", "Lib/python"}
+        file_ignore_patterns = {".git", "node_modules", "lib/python", "Lib/python"}
       }
     }
   },
