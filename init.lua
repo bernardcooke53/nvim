@@ -200,17 +200,43 @@ local config = {
     -- Add overrides for LSP server settings, the keys are the name of the server
     ["server-settings"] = {
       -- example for addings schemas to yamlls
-      -- yamlls = {
-      --   settings = {
-      --     yaml = {
-      --       schemas = {
-      --         ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*.{yml,yaml}",
-      --         ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-      --         ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
-      --       },
-      --     },
-      --   },
-      -- },
+      yamlls = {
+        settings = {
+          yaml = {
+            schemas = {
+              ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*.{yml,yaml}",
+              ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+              ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
+            },
+          },
+        },
+      },
+      pylsp = {
+        settings = {
+          pylsp = {
+            plugins = {
+              pylsp_mypy = { enabled = true },
+              pyls_isort = { enabled = true },
+              flake8 = { enabled = true },
+              pylint = { enabled = false },
+              pyflakes = { enabled = true },
+              pycodestyle = { enabled = false },
+              black = { enabled = true }
+            },
+            tab_width = 4
+          }
+        }
+      },
+      pyright = {
+        settings = {
+          tab_width = 4
+        }
+      },
+      sumneko_lua = {
+        settings = {
+          tab_width = 4
+        }
+      }
     },
   },
 
