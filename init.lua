@@ -88,7 +88,8 @@ local config = {
       --   end,
       -- },
       { "svermeulen/vim-cutlass" },
-      { "psf/black" }
+      { "psf/black" },
+      { "junegunn/fzf.vim" }
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -162,6 +163,7 @@ local config = {
         ["<leader>"] = {
           -- which-key registration table for normal mode, leader prefix
           -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
+          ["b"] = {":b#<cr>", "Previous buffer"}
         },
       },
     },
@@ -235,6 +237,24 @@ local config = {
       sumneko_lua = {
         settings = {
           tab_width = 4
+        }
+      },
+      ["rust-analyzer"] = {
+        settings = {
+          imports = {
+            granularity = {
+              group = "module",
+            },
+            prefix = "self",
+          },
+          cargo = {
+            buildScripts = {
+              enable = true,
+            },
+          },
+          procMacro = {
+            enable = true
+          }
         }
       }
     },
